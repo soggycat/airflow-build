@@ -2,11 +2,12 @@ FROM docker.io/soggycat/airflow:v2.11.2
 
 USER root
 
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y \
-        build-essential \
+RUN microdnf update -y && \
+    microdnf install -y \
+        gcc \
+        gcc-c++ \
+        make \
         curl \
-    && apt-get clean
-    
+    && microdnf clean all
+
 USER airflow
