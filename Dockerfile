@@ -1,7 +1,19 @@
 # ---- builder stage ----
 FROM python:3.12 as builder
 
-RUN apt-get update && apt-get install -y build-essential
+RUN apt-get update && apt-get install -y \
+
+    libxml2-dev \
+
+    libxmlsec1-dev \
+
+    libxslt1-dev \
+
+    pkg-config \
+
+    gcc \
+
+    && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
 RUN pip install --prefix=/install -r requirements.txt
