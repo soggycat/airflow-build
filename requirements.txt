@@ -1,0 +1,21 @@
+# Core extras (match your Airflow version!)
+apache-airflow-providers-amazon==8.21.0
+apache-airflow-providers-http==4.13.0
+apache-airflow-providers-postgres==5.13.0
+
+# Common utilities
+requests==2.32.3
+pandas==2.2.2
+numpy==1.26.4
+
+# Cloud / data
+boto3==1.34.162
+
+# Optional: db clients (pure python or prebuilt wheels)
+psycopg2-binary==2.9.9
+
+# Serialization / parsing
+pyyaml==6.0.2
+
+# Date handling
+pendulum==3.0.0
